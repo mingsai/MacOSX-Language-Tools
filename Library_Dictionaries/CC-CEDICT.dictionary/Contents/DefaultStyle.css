@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@namespace d url(http://www.apple.com/DTDs/DictionaryService-1.0.rng);
+
+d|entry {
+}
+
+span.zw {
+    font-weight: bold;
+}
+
+span.zwtype, span.syntax {
+    color: #666666;
+}
+
+ol {
+    counter-reset: list-item;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li:before {
+    color: #666666;
+    content: counter(list-item, decimal) ") ";
+    counter-increment: list-item;
+}
